@@ -1,2 +1,2 @@
 # demodoc
-la on test si le commit envoie bien sur le repo !
+la cest pour le build vers le hub
