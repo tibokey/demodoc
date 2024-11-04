@@ -1,4 +1,4 @@
-name: Docker Image CI  # Nom de l'action GitHub
+name: Docker Image CI  # Nom de l'action GitHub (test)
 
 on:  # Événement déclencheur de l'action
   workflow_run:  # Déclenché lorsqu'un workflow spécifique est exécuté
