@@ -15,7 +15,6 @@ jobs:  # Définition des jobs à exécuter lors de l'événement déclencheur
       - uses: actions/checkout@v4  # Récupération du code source du référentiel
 
       - name: Build the Docker image  # Nom de l'étape pour construire l'image Docker
-        #run: docker build ./App -t ${{ secrets.DOCKER_USERNAME }}/projet-flask-v0.1:${{ github.sha }}  # Commande pour construire l'image Docker avec des tags spécifiques
         run: docker build ./App -t ${{ secrets.DOCKER_USERNAME }}/projet-flask-v0.1  # Commande pour construire l'image Docker avec des tags spécifiques
 
       - name: Log in to Docker Registry  # Nom de l'étape pour se connecter au registre Docker
