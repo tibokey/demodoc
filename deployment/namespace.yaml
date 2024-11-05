@@ -1,0 +1,4 @@
+apiVersion: v1  # Version de l'API Kubernetes utilisée pour cette configuration
+kind: Namespace  # Type de ressource Kubernetes à créer, ici un Namespace
+metadata:  # Métadonnées pour la ressource
+  name: devops-demo  # Nom du namespace, qui sera utilisé pour organiser et isoler les ressources au sein du cluster

@@ -1,0 +1,13 @@
+apiVersion: v1  # Version de l'API Kubernetes utilisée pour cette configuration
+kind: ConfigMap  # Type de ressource Kubernetes à créer, ici un ConfigMap
+metadata:  # Métadonnées pour la ressource
+  name: mongo-init-script  # Nom du ConfigMap
+  namespace: devops-demo  # Namespace dans lequel ce ConfigMap sera créé
+data:  # Données contenues dans le ConfigMap
+  init.js: |  # Nom du fichier et début du contenu, encodé en YAML block scalar format (|) pour multi-lignes
+    db = db.getSiblingDB('devops');  # Sélection de la base de données 'devops'
+    db.users.insertMany([  # Insertion de plusieurs documents dans la collection 'users'
+      { firstName: "Emma", lastName: "Brown", age: 30, email: "emma.brown@example.com" },  # Document 1
+      { firstName: "Alice", lastName: "Smith", age: 25, email: "alice.smith@example.com" },  # Document 2
+      { firstName: "Bob", lastName: "Johnson", age: 28, email: "bob.johnson@example.com" }  # Document 3
+    ]);  # Fin de l'insertion
