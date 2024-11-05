@@ -4,7 +4,8 @@ metadata:  # Métadonnées pour la ressource
   name: mongo-init-script  # Nom du ConfigMap
   namespace: devops-demo  # Namespace dans lequel ce ConfigMap sera créé
 data:  # Données contenues dans le ConfigMap
-  init.js: |  # Nom du fichier et début du contenu, encodé en YAML block scalar format (|) pour multi-lignes
+# Nom du fichier et début du contenu, encodé en YAML block scalar format (|) pour multi-lignes
+  init.js: |  
     db = db.getSiblingDB('devops');  # Sélection de la base de données 'devops'
     db.users.insertMany([  # Insertion de plusieurs documents dans la collection 'users'
       { firstName: "Emma", lastName: "Brown", age: 30, email: "emma.brown@example.com" },  # Document 1
